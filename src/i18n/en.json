@@ -7,9 +7,22 @@
   },
   "hero": {
     "title": "Hi, I'm a Junior Developer",
-    "subtitle": "Building beautiful, functional web experiences",
-    "cta_projects": "View Projects",
+    "subtitle": "Building beautiful, functional web experiences with modern technologies",
+    "description": "I specialize in Java, C#, and JavaScript. Currently learning the web development stack and passionate about creating clean, user-friendly applications.",
+    "cta_projects": "View My Projects",
     "cta_cv": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm a junior developer with 1.5 years of professional experience in Java development. I'm passionate about learning new technologies and building applications that solve real problems.",
+    "paragraph2": "My journey started with Java backend development, expanded to C# projects, and now I'm diving deep into modern web technologies including JavaScript, React, and Next.js.",
+    "paragraph3": "I believe in writing clean, maintainable code and continuously improving my skills. I'm eager to collaborate with experienced developers and contribute to meaningful projects.",
+    "paragraph4": "When I'm not coding, you can find me exploring new frameworks, contributing to open-source, or discussing tech with the dev community."
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "core": "Core Skills",
+    "learning": "Currently Learning"
   },
   "footer": {
     "copyright": "© 2025. All rights reserved.",
