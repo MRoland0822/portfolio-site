@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "about": "Rólam",
+    "projects": "Projektek",
+    "experience": "Tapasztalat",
+    "contact": "Kapcsolat"
+  },
+  "hero": {
+    "title": "Sziasztok, junior fejlesztő vagyok",
+    "subtitle": "Szép, funkcionális webes tapasztalatokat fejlesztek",
+    "cta_projects": "Projektek megtekintése",
+    "cta_cv": "CV letöltése"
+  },
+  "footer": {
+    "copyright": "© 2025. Minden jog fenntartva.",
+    "language": "Nyelv"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hi, I'm a Junior Developer",
+    "subtitle": "Building beautiful, functional web experiences",
+    "cta_projects": "View Projects",
+    "cta_cv": "Download CV"
+  },
+  "footer": {
+    "copyright": "© 2025. All rights reserved.",
+    "language": "Language"
+  }
+}
