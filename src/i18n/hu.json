@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "about": "Rólam",
+    "projects": "Projektek",
+    "experience": "Tapasztalat",
+    "contact": "Kapcsolat"
+  },
+  "hero": {
+    "title": "Sziasztok, junior fejlesztő vagyok",
+    "subtitle": "Szép, funkcionális webes tapasztalatokat fejlesztek modern technológiákkal",
+    "description": "Specialista vagyok Java-ban, C#-ban és JavaScriptben. Jelenleg a webfejlesztési stack tanulása alatt állok, és szenvedélyes vagyok a tiszta, felhasználóbarát alkalmazások létrehozásában.",
+    "cta_projects": "Projektek megtekintése",
+    "cta_cv": "CV letöltése"
+  },
+  "about": {
+    "title": "Rólam",
+    "paragraph1": "Junior fejlesztő vagyok 1,5 év Java fejlesztési tapasztalattal. Szenvedélyes vagyok az új technológiák tanulásában és olyan alkalmazások fejlesztésében, amelyek valós problémákat oldanak meg.",
+    "paragraph2": "Az utam Java backend fejlesztéssel kezdődött, C# projektekkel bővült, és most a modern webtechnológiákba mélyedek el, beleértve a JavaScriptet, a Reactet és a Next.js-t.",
+    "paragraph3": "Hiszem, hogy tiszta, fenntartható kódot írni és folyamatosan fejleszteni kell a készségeket. Szívesen dolgozom tapasztalt fejlesztőkkel és hozzájárulok értelmes projektekhez.",
+    "paragraph4": "Amikor nem kódolok, új keretrendszereket fedezek fel, nyílt forráskódú projektekhez járulok hozzá, vagy megbeszélem a technikákat a fejlesztői közösséggel."
+  },
+  "skills": {
+    "title": "Készségek és Technológiák",
+    "core": "Alapvető Készségek",
+    "learning": "Jelenleg Tanulom"
+  },
+  "projects": {
+    "title": "Kiemelt Projektek",
+    "subtitle": "A projektek közül, amelyeket készítettem és megtanultam belőlük",
+    "viewGithub": "Megtekintés GitHubon",
+    "viewLive": "Élő verzió"
+  },
+  "experience": {
+    "title": "Tapasztalat & Útvonal",
+    "subtitle": "Szakmai pályám és tanulási tapasztalataim",
+    "work": "Szakmai Tapasztalat",
+    "learning": "Tanulás és Oktatás",
+    "project": "Személyes Projektek"
+  },
+  "contact": {
+    "title": "Vegyünk Kapcsolatot",
+    "subtitle": "Csatlakozzunk és készítsünk valamit nagyot együtt",
+    "description": "Mindig szívesen hallok új projektekről és lehetőségekről. Legyen szó kérdésről vagy csak egy üdvözlésről, nyugodtan lépj kapcsolatba velem!",
+    "email": "your.email@example.com",
+    "emailLabel": "Küldj nekem emailt",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "twitter": "Twitter"
+  },
+  "footer": {
+    "copyright": "© 2025. Minden jog fenntartva.",
+    "language": "Nyelv"
+  }
+}
