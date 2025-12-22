@@ -24,6 +24,29 @@
     "core": "Alapvető Készségek",
     "learning": "Jelenleg Tanulom"
   },
+  "projects": {
+    "title": "Kiemelt Projektek",
+    "subtitle": "A projektek közül, amelyeket készítettem és megtanultam belőlük",
+    "viewGithub": "Megtekintés GitHubon",
+    "viewLive": "Élő verzió"
+  },
+  "experience": {
+    "title": "Tapasztalat & Útvonal",
+    "subtitle": "Szakmai pályám és tanulási tapasztalataim",
+    "work": "Szakmai Tapasztalat",
+    "learning": "Tanulás és Oktatás",
+    "project": "Személyes Projektek"
+  },
+  "contact": {
+    "title": "Vegyünk Kapcsolatot",
+    "subtitle": "Csatlakozzunk és készítsünk valamit nagyot együtt",
+    "description": "Mindig szívesen hallok új projektekről és lehetőségekről. Legyen szó kérdésről vagy csak egy üdvözlésről, nyugodtan lépj kapcsolatba velem!",
+    "email": "your.email@example.com",
+    "emailLabel": "Küldj nekem emailt",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "twitter": "Twitter"
+  },
   "footer": {
     "copyright": "© 2025. Minden jog fenntartva.",
     "language": "Nyelv"

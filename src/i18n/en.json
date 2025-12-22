@@ -24,6 +24,29 @@
     "core": "Core Skills",
     "learning": "Currently Learning"
   },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of projects I've built and learned from",
+    "viewGithub": "View on GitHub",
+    "viewLive": "View Live"
+  },
+  "experience": {
+    "title": "Experience & Journey",
+    "subtitle": "My professional path and learning experiences",
+    "work": "Professional Experience",
+    "learning": "Learning & Education",
+    "project": "Personal Projects"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's connect and build something great together",
+    "description": "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
+    "email": "your.email@example.com",
+    "emailLabel": "Send me an email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "twitter": "Twitter"
+  },
   "footer": {
     "copyright": "© 2025. All rights reserved.",
     "language": "Language"
