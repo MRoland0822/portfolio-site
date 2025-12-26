@@ -11,68 +11,80 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
+   {
     id: 'project-1',
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with Java backend and modern UI',
+    title: '3D Printed Robot Hand with DSP & Image Processing',
+    description: 'Advanced robotics project using digital signal processing and image recognition',
     longDescription:
-      'Built a complete e-commerce platform with user authentication, product management, shopping cart, and payment integration. Implemented RESTful APIs with Spring Boot and optimized database queries.',
-    technologies: ['Java', 'Spring Boot', 'MySQL', 'REST API'],
-    githubUrl: 'https://github.com/yourusername/ecommerce-platform',
-    liveUrl: 'https://ecommerce-demo.com',
+      'Developed a fully functional 3D-printed robotic hand controlled through sophisticated digital signal processing (DSP) and image processing algorithms. The hand responds to visual input using computer vision techniques. This project showcased expertise in signal processing, image recognition, and practical robotics engineering.',
+    technologies: ['Python', 'DSP', 'Image Processing', 'OpenCV', '3D Printing', 'Robotics'],
+    githubUrl: 'https://github.com/MRoland0822/3D-nyomtatott-kez-vezerlese-EMG-jelekkel-es-kepfeldolgozassal',
     featured: true,
   },
   {
     id: 'project-2',
-    title: 'Task Management App',
-    description: 'A C# desktop application for managing daily tasks and projects',
+    title: 'TMS - Social Media App for Car Lovers',
+    description: 'Mobile Android application for car enthusiast community',
     longDescription:
-      'Developed a Windows desktop application using C# and WPF for task management. Features include task categorization, deadline tracking, and data persistence with local database.',
-    technologies: ['C#', 'WPF', 'SQL Server', 'MVVM'],
-    githubUrl: 'https://github.com/yourusername/task-manager',
+      'Developed a full-featured social media application built with Android Studio targeting car enthusiasts. The app includes user authentication, community features, and car-specific content sharing capabilities. Designed with a focus on user engagement and community building.',
+    technologies: ['Android', 'Firebase', 'Material Design', 'Mobile Development'],
+    githubUrl: 'https://github.com/MRoland0822/TMS',
     featured: true,
   },
-  {
-    id: 'project-3',
-    title: 'Weather Dashboard',
-    description: 'A responsive weather app built with React and weather API integration',
-    longDescription:
-      'Created a real-time weather dashboard that fetches data from a public API. Features include current weather, 7-day forecast, location search, and dark mode support.',
-    technologies: ['React', 'JavaScript', 'Tailwind CSS', 'API'],
-    githubUrl: 'https://github.com/yourusername/weather-dashboard',
-    liveUrl: 'https://weather-dashboard-demo.com',
-    featured: true,
-  },
-  {
-    id: 'project-4',
-    title: 'Blog Platform',
-    description: 'A lightweight blogging platform built with Next.js and Markdown',
-    longDescription:
-      'Developed a modern blog platform with server-side rendering, markdown support, and SEO optimization. Includes admin panel for content management.',
-    technologies: ['Next.js', 'TypeScript', 'Markdown', 'TailwindCSS'],
-    githubUrl: 'https://github.com/yourusername/blog-platform',
-    liveUrl: 'https://blog-demo.com',
-    featured: false,
-  },
-  {
-    id: 'project-5',
-    title: 'Inventory Management System',
-    description: 'A Java-based system for tracking inventory across multiple locations',
-    longDescription:
-      'Built an enterprise inventory management system with real-time stock tracking, automated reordering, and reporting features. Handles thousands of transactions daily.',
-    technologies: ['Java', 'PostgreSQL', 'Spring MVC', 'Hibernate'],
-    githubUrl: 'https://github.com/yourusername/inventory-system',
-    featured: false,
-  },
-  {
-    id: 'project-6',
-    title: 'Chat Application',
-    description: 'A real-time messaging app with WebSocket support',
-    longDescription:
-      'Developed a real-time chat application with user authentication, message history, and typing indicators. Uses WebSockets for instant communication.',
-    technologies: ['Node.js', 'Socket.io', 'React', 'MongoDB'],
-    githubUrl: 'https://github.com/yourusername/chat-app',
-    liveUrl: 'https://chat-app-demo.com',
-    featured: false,
-  },
+ {
+  id: 'project-3',
+  title: 'Auth + Roles + CRUD Admin Panel',
+  description: 'Full-stack application with authentication, role-based access control, and admin management',
+  longDescription:
+    'A comprehensive full-stack web application demonstrating advanced authentication with JWT tokens, role-based access control (RBAC), and complete CRUD operations. Features a modern Next.js frontend with TypeScript and a robust NestJS backend with PostgreSQL. Includes audit logging to track all administrative actions, user management capabilities, and secure password handling with bcrypt. The application showcases enterprise-level architecture with Docker containerization, proper error handling, and responsive UI design.',
+  technologies: [
+    'TypeScript',
+    'NestJS',
+    'PostgreSQL',
+    'Prisma',
+    'Docker',
+  ],
+  githubUrl: 'https://github.com/MRoland0822/auth-admin-panel',
+  featured: true,
+},
+{
+  id: 'project-4',
+  title: 'Personal Portfolio Website',
+  description: 'Modern, fully responsive portfolio built with Next.js 14, featuring i18n and smooth animations',
+  longDescription:
+    'A modern, production-ready personal portfolio website built with Next.js 14 and TypeScript. Features include i18n support (Hungarian/English), smooth Framer Motion animations, responsive design optimized for all devices, and comprehensive SEO optimization. The portfolio showcases projects, experience, and skills with a clean, minimalist design. Built with best practices including server components, proper TypeScript typing, and deployed on Vercel with automatic CI/CD.',
+  technologies: [
+    'Next.js 14',
+    'TypeScript',
+    'TailwindCSS',
+    'Framer Motion',
+    'next-intl',
+    'Responsive Design',
+    'SEO Optimization',
+    'Vercel',
+  ],
+  githubUrl: 'https://github.com/MRoland0822/portfolio-site',
+  liveUrl: 'https://your-portfolio-domain.com', 
+  featured: true,
+},
+{
+  id: 'project-5',
+  title: 'Christmas Gift Website',
+  description: 'An interactive Christmas gift experience with animated cards, snowfall effects, and ambient music.',
+  longDescription:
+    'A beautiful, festive web application built with Next.js and TypeScript. Users can click on a wrapped gift box to reveal a grid of mystery cards with personalized messages. Features smooth 3D card flip animations, continuous snowfall, twinkling stars, and background music. Fully responsive design with mobile-first approach and accessibility features including keyboard navigation and ARIA labels.',
+  technologies: [
+    'Next.js 14',
+    'TypeScript',
+    'React',
+    'Tailwind CSS',
+    'Framer Motion',
+    'CSS Animations',
+    'Web Audio API',
+  ],
+  githubUrl: 'https://github.com/MRoland0822/christmas-gift-app',
+  liveUrl: 'https://christmas-gift-app.vercel.app',
+  featured: true,
+},
+  
 ];

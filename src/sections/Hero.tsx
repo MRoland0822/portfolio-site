@@ -13,19 +13,19 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.18,
+        delayChildren: 0.25,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 24 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.55,
         ease: "easeOut",
       },
     },
@@ -34,17 +34,22 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 px-4 sm:px-6 lg:px-8"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 px-4 sm:px-6 lg:px-8"
     >
+      {/* Decorative gradient glow */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <div className="h-[420px] w-[420px] rounded-full bg-linear-to-tr from-indigo-500/10 via-purple-500/10 to-pink-500/10 blur-3xl dark:from-indigo-500/20 dark:via-purple-500/20 dark:to-pink-500/20" />
+      </div>
+
       <motion.div
-        className="max-w-4xl w-full text-center"
+        className="relative z-10 max-w-4xl w-full text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Subtitle Badge */}
         <motion.div variants={itemVariants} className="mb-6">
-          <span className="inline-block px-4 py-2 bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-white/70 dark:bg-gray-900/70 text-gray-800 dark:text-gray-200 border border-gray-200/60 dark:border-gray-800/60 backdrop-blur">
             👋 Welcome to my portfolio
           </span>
         </motion.div>
@@ -52,7 +57,7 @@ export default function Hero() {
         {/* Main Title */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-[1.1] tracking-tight"
         >
           {t("title")}
         </motion.h1>
@@ -60,7 +65,7 @@ export default function Hero() {
         {/* Subtitle */}
         <motion.p
           variants={itemVariants}
-          className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4 leading-relaxed font-medium"
         >
           {t("subtitle")}
         </motion.p>
@@ -68,7 +73,7 @@ export default function Hero() {
         {/* Description */}
         <motion.p
           variants={itemVariants}
-          className="text-lg text-gray-500 dark:text-gray-500 mb-12 max-w-2xl mx-auto"
+         className="text-base sm:text-2xl text-gray-500 dark:text-gray-400 mb-10 leading-relaxed"
         >
           {t("description")}
         </motion.p>
@@ -82,32 +87,34 @@ export default function Hero() {
             href="#projects"
             variant="primary"
             size="lg"
-            className="w-full sm:w-auto"
+            className="w-full sm:w-auto px-8"
           >
             {t("cta_projects")} →
           </Button>
+
           <Button
-            href="/cv.pdf"
-            variant="outline"
-            size="lg"
-            className="w-full sm:w-auto"
-          >
-            {t("cta_cv")} ↓
-          </Button>
+          href="/cv.pdf"
+          variant="outline"
+          size="lg"
+          className="w-full sm:w-auto px-8"
+          download
+        >
+          {t("cta_cv")} ↓
+        </Button>
         </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
           variants={itemVariants}
-          className="mt-16"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          className="mt-16 flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2.2, repeat: Infinity }}
         >
-          <p className="text-gray-500 dark:text-gray-400 text-sm mb-2">
-            Scroll to explore
-          </p>
+          <span className="text-xs tracking-wide uppercase">
+            Scroll
+          </span>
           <svg
-            className="w-6 h-6 mx-auto text-gray-400"
+            className="w-5 h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

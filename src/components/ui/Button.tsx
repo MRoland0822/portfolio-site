@@ -8,6 +8,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  download?: boolean | string;
 }
 
 export default function Button({
@@ -17,6 +18,7 @@ export default function Button({
   variant = 'primary',
   size = 'md',
   className = '',
+  download,
 }: ButtonProps) {
   const baseStyles =
     'font-medium rounded-lg transition-all duration-200 inline-flex items-center justify-center gap-2';
@@ -39,6 +41,7 @@ export default function Button({
     return (
       <motion.a
         href={href}
+        download={download}
         className={buttonClass}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}

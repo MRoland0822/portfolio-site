@@ -6,18 +6,18 @@
     "contact": "Kapcsolat"
   },
   "hero": {
-    "title": "Sziasztok, junior fejlesztő vagyok",
-    "subtitle": "Szép, funkcionális webes tapasztalatokat fejlesztek modern technológiákkal",
-    "description": "Specialista vagyok Java-ban, C#-ban és JavaScriptben. Jelenleg a webfejlesztési stack tanulása alatt állok, és szenvedélyes vagyok a tiszta, felhasználóbarát alkalmazások létrehozásában.",
+    "title": "Sziasztok, Magyar Roland vagyok",
+    "subtitle": "Technológia Rajongó",
+    "description": "Szenvedélyes fejlesztő, aki élénken érdeklődik a modern technológiák iránt, aktívan követi a technológiai híreket és trendeket. Lelkesedik az AI-alapú megoldásokért és a valódi értéket teremtő szoftverek fejlesztéséért.",
     "cta_projects": "Projektek megtekintése",
     "cta_cv": "CV letöltése"
   },
-  "about": {
+   "about": {
     "title": "Rólam",
-    "paragraph1": "Junior fejlesztő vagyok 1,5 év Java fejlesztési tapasztalattal. Szenvedélyes vagyok az új technológiák tanulásában és olyan alkalmazások fejlesztésében, amelyek valós problémákat oldanak meg.",
-    "paragraph2": "Az utam Java backend fejlesztéssel kezdődött, C# projektekkel bővült, és most a modern webtechnológiákba mélyedek el, beleértve a JavaScriptet, a Reactet és a Next.js-t.",
-    "paragraph3": "Hiszem, hogy tiszta, fenntartható kódot írni és folyamatosan fejleszteni kell a készségeket. Szívesen dolgozom tapasztalt fejlesztőkkel és hozzájárulok értelmes projektekhez.",
-    "paragraph4": "Amikor nem kódolok, új keretrendszereket fedezek fel, nyílt forráskódú projektekhez járulok hozzá, vagy megbeszélem a technikákat a fejlesztői közösséggel."
+    "paragraph1": "Én vagyok Roland, egy proaktív és kíváncsi fejlesztő Romániából, erős szenvedéllyel a technológia és a folyamatos tanulás iránt. 2+ év szakmai tapasztalatom van, elsősorban Java szoftverfejlesztésben a Konecranes-nál, ahol misszió-kritikus alkalmazásokat fejlesztek kikötőterminálokra.",
+    "paragraph2": "Technikai utam a Sapientia Magyar Egyetem Erdélyben szerzett átfogó számítástudományi diplomájával kezdődött, ahol mély szakértelmet szereztem olyan programozási nyelvekben, mint a Java, C, C++ és Kotlin, valamint fejlett témákban, mint a digitális jelfeldolgozás és képfeldolgozás.",
+    "paragraph3": "A hagyományos szoftverfejlesztésen túl, érdekelnek az olyan emerging technológiák, mint az AI és a robotika. Több projektet sikeresen végigvittem, amelyek kombinálják ezeket az érdeklődéseket, például egy 3D-nyomtatott robot kéz, amelyet DSP és képfeldolgozó algoritmusokkal vezéreltem.",
+    "paragraph4": "Ha nem kódolok, az edzőteremben vagy új technológiák felfedezésében merülök el, vagy elektronikai DIY projekteken dolgozom. Mindig szívesen együttműködöm tehetséges csapatokkal és járulok hozzá értelmes projektekhez, amelyek valódi hatást gyakorolnak."
   },
   "skills": {
     "title": "Készségek és Technológiák",
@@ -37,15 +37,14 @@
     "learning": "Tanulás és Oktatás",
     "project": "Személyes Projektek"
   },
-  "contact": {
+   "contact": {
     "title": "Vegyünk Kapcsolatot",
-    "subtitle": "Csatlakozzunk és készítsünk valamit nagyot együtt",
-    "description": "Mindig szívesen hallok új projektekről és lehetőségekről. Legyen szó kérdésről vagy csak egy üdvözlésről, nyugodtan lépj kapcsolatba velem!",
-    "email": "your.email@example.com",
+    "subtitle": "",
+    "description": "Mindig szívesen hallok új projektekről, lehetőségekről és érdekes kihívásokról. Nyugodtan lépj kapcsolatba velem — szívesen beszélgetnék a technológiáról, a robotikáról vagy bármi másról!",
+    "email": "rollimagyar@gmail.com",
     "emailLabel": "Küldj nekem emailt",
     "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "twitter": "Twitter"
+    "github": "GitHub"
   },
   "footer": {
     "copyright": "© 2025. Minden jog fenntartva.",

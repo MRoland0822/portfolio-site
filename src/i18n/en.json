@@ -5,19 +5,19 @@
     "experience": "Experience",
     "contact": "Contact"
   },
-  "hero": {
-    "title": "Hi, I'm a Junior Developer",
-    "subtitle": "Building beautiful, functional web experiences with modern technologies",
-    "description": "I specialize in Java, C#, and JavaScript. Currently learning the web development stack and passionate about creating clean, user-friendly applications.",
+ "hero": {
+    "title": "Hi, I'm Roland Magyar",
+    "subtitle": "Tech Enthusiast",
+    "description": "Passionate developer with a strong interest in modern technologies, actively following tech news and trends. Enthusiastic about AI-driven solutions and building impactful software.",
     "cta_projects": "View My Projects",
     "cta_cv": "Download CV"
   },
-  "about": {
+ "about": {
     "title": "About Me",
-    "paragraph1": "I'm a junior developer with 1.5 years of professional experience in Java development. I'm passionate about learning new technologies and building applications that solve real problems.",
-    "paragraph2": "My journey started with Java backend development, expanded to C# projects, and now I'm diving deep into modern web technologies including JavaScript, React, and Next.js.",
-    "paragraph3": "I believe in writing clean, maintainable code and continuously improving my skills. I'm eager to collaborate with experienced developers and contribute to meaningful projects.",
-    "paragraph4": "When I'm not coding, you can find me exploring new frameworks, contributing to open-source, or discussing tech with the dev community."
+    "paragraph1": "I'm Roland, a proactive and curious developer from Satu Mare, Romania, with a strong passion for technology and continuous learning.",
+    "paragraph2": "My technical journey began with a comprehensive computer science degree from Sapientia Hungarian University of Transylvania, where I gained deep expertise in programming languages like Java, C, C++, and Kotlin, as well as advanced topics like digital signal processing and image processing.",
+    "paragraph3": "Beyond traditional software development, I'm fascinated by emerging technologies including AI and robotics.",
+    "paragraph4": "When I'm not coding, you'll find me staying active at the gym, exploring new technologies, or working on hands-on DIY electronics projects. I'm always eager to collaborate with talented teams and contribute to meaningful projects that make a real impact."
   },
   "skills": {
     "title": "Skills & Technologies",
@@ -38,14 +38,13 @@
     "project": "Personal Projects"
   },
   "contact": {
-    "title": "Get In Touch",
-    "subtitle": "Let's connect and build something great together",
-    "description": "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
-    "email": "your.email@example.com",
+    "title": "Let's Connect",
+    "subtitle": "",
+    "description": "I'm always interested in hearing about new projects, opportunities, and interesting challenges. Feel free to reach out — I'd love to chat about technology, robotics, or anything else!",
+    "email": "rollimagyar@gmail.com",
     "emailLabel": "Send me an email",
     "linkedin": "LinkedIn",
-    "github": "GitHub",
-    "twitter": "Twitter"
+    "github": "GitHub"
   },
   "footer": {
     "copyright": "© 2025. All rights reserved.",

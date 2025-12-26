@@ -1,96 +1,109 @@
-'use client';
+"use client";
 
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import type { Variants } from 'framer-motion';
-import SectionTitle from '@/components/ui/SectionTitle';
-import Badge from '@/components/ui/Badge';
-import { skills, type Skill } from '@/data/skills';
+import { useTranslations } from "next-intl";
+import { useMemo } from "react";
+import { motion } from "framer-motion";
+import { skills, type Skill } from "@/data/skills";
 
-const containerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.05,
-      delayChildren: 0.1,
-    },
-  },
+// Deterministic pseudo-random generator so results are stable across renders
+const pseudoRandom = (seed: number) => {
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
 };
 
-const itemVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.3,
-      ease: 'easeOut',
-    },
-  },
-};
-
-const groupVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
-interface SkillsGroupProps {
-  title: string;
-  skillsList: Skill[];
+interface SkillNodeProps {
+  skill: Skill;
+  x: number;
+  y: number;
+  delay: number;
+  size: number;
 }
 
-const SkillsGroup = ({ title, skillsList }: SkillsGroupProps) => (
-  <motion.div variants={groupVariants}>
-    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-      {title}
-    </h3>
-
-    <motion.div className="flex flex-wrap gap-3" variants={containerVariants}>
-      {skillsList.map((skill) => (
-        <motion.div key={skill.name} variants={itemVariants}>
-          <Badge
-            variant={skill.category === 'core' ? 'default' : 'outline'}
-            className="hover:scale-105 transition-transform duration-200 cursor-default"
-          >
-            {skill.name}
-          </Badge>
-        </motion.div>
-      ))}
-    </motion.div>
+const SkillNode = ({ skill, x, y, delay, size }: SkillNodeProps) => (
+  <motion.div
+    className="absolute flex items-center justify-center cursor-pointer select-none"
+    style={{ left: `${x}%`, top: `${y}%` }}
+    animate={{ y: [y, y + 5, y], x: [x, x + 3, x] }}
+    transition={{ repeat: Infinity, duration: 6 + delay, ease: "easeInOut" }}
+    whileHover={{ scale: 1.15 }}
+  >
+    <div
+      className={`flex items-center justify-center rounded-full font-medium text-center shadow-md ${
+        skill.category === "core"
+          ? "bg-purple-500 text-white"
+          : "bg-purple-100 dark:bg-purple-800 text-purple-900 dark:text-purple-200"
+      }`}
+      style={{ width: size, height: size, padding: "0.5rem" }}
+    >
+      {skill.name}
+    </div>
   </motion.div>
 );
 
-export default function Skills() {
-  const t = useTranslations('skills');
+export default function SkillsFloating() {
+  const t = useTranslations("skills");
+  const nodeSize = 120; // pixels
 
-  const coreSkills = skills.filter((skill) => skill.category === 'core');
-  const learningSkills = skills.filter((skill) => skill.category === 'learning');
+  // Generate positions and delays deterministically (no Math.random in render)
+  const { positions, delays } = useMemo(() => {
+    // Helper: generate non-overlapping positions
+    const generatePositions = (count: number, size: number) => {
+      const positions: { x: number; y: number }[] = [];
+      const maxAttempts = 1000;
+      let attempts = 0;
+      let seed = 1;
+
+      while (positions.length < count && attempts < maxAttempts) {
+        attempts++;
+        const x = pseudoRandom(seed++) * 80 + 10; // 10% → 90%
+        const y = pseudoRandom(seed++) * 70 + 10; // 10% → 80%
+
+        // Check overlap
+        const overlapping = positions.some(
+          (pos) => Math.abs(pos.x - x) * 10 < size && Math.abs(pos.y - y) * 10 < size
+        );
+
+        if (!overlapping) {
+          positions.push({ x, y });
+        }
+      }
+      return positions;
+    };
+
+    const pos = generatePositions(skills.length, nodeSize);
+    const del = skills.map((_, index) => pseudoRandom(1000 + index) * 3);
+    return { positions: pos, delays: del };
+  }, [nodeSize]);
 
   return (
-    <section
-      id="skills"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900"
-    >
-      <div className="max-w-4xl mx-auto">
-        <SectionTitle>{t('title')}</SectionTitle>
+    <section className="relative py-32 px-6 border-t border-gray-200/60 dark:border-gray-800/60">
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-center text-gray-900 dark:text-white mb-20">
+        {t("title")}
+      </h2>
 
+      <div className="relative w-full h-[700px] md:h-[700px] lg:h-[800px] mx-auto">
+        {skills.map((skill, idx) => (
+          <SkillNode
+            key={skill.name}
+            skill={skill}
+            x={positions[idx].x}
+            y={positions[idx].y}
+            delay={delays[idx]}
+            size={nodeSize}
+          />
+        ))}
+
+        {/* Background floating shapes */}
         <motion.div
-          className="space-y-16"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-        >
-          <SkillsGroup title={t('core')} skillsList={coreSkills} />
-          <SkillsGroup title={t('learning')} skillsList={learningSkills} />
-        </motion.div>
+          className="absolute top-10 left-1/4 w-64 h-64 bg-purple-300 dark:bg-purple-700 rounded-full opacity-20 blur-3xl pointer-events-none"
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 120, ease: "linear" }}
+        />
+        <motion.div
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-300 dark:bg-pink-700 rounded-full opacity-15 blur-3xl pointer-events-none"
+          animate={{ rotate: -360 }}
+          transition={{ repeat: Infinity, duration: 150, ease: "linear" }}
+        />
       </div>
     </section>
   );

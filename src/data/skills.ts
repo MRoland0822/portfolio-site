@@ -7,10 +7,12 @@ export const skills: Skill[] = [
   // Core Skills
   { name: 'Java', category: 'core' },
   { name: 'C#', category: 'core' },
+  { name: 'Python', category: 'core' },
   { name: 'Object-Oriented Programming', category: 'core' },
-  { name: 'SQL', category: 'core' },
+  { name: 'Digital Signal Processing', category: 'core' },
+  { name: 'Image Processing', category: 'core' },
   { name: 'Git & GitHub', category: 'core' },
-  { name: 'Problem Solving', category: 'core' },
+  { name: 'Electronics', category: 'core' },
 
   // Currently Learning
   { name: 'JavaScript', category: 'learning' },
@@ -18,7 +20,7 @@ export const skills: Skill[] = [
   { name: 'Next.js 14', category: 'learning' },
   { name: 'TypeScript', category: 'learning' },
   { name: 'TailwindCSS', category: 'learning' },
-  { name: 'Framer Motion', category: 'learning' },
-  { name: 'Web Design', category: 'learning' },
+  { name: 'Artificial Intelligence', category: 'learning' },
+  { name: 'NestJS', category: 'learning' },
   { name: 'REST APIs', category: 'learning' },
 ];

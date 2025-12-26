@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 import Badge from './Badge';
-import Button from './Button';
 import { Project } from '@/data/projects';
 
 interface ProjectCardProps {
   project: Project;
   index: number;
+  className?: string;
 }
 
 const cardVariants: Variants = {
@@ -23,7 +23,7 @@ const cardVariants: Variants = {
   },
 };
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+export default function ProjectCard({ project, index, className }: ProjectCardProps) {
   return (
     <motion.div
       variants={cardVariants}
@@ -31,77 +31,66 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView="visible"
       viewport={{ once: true, margin: '-100px' }}
       transition={{ delay: index * 0.1 }}
-      className="group"
+      className="group w-full"
     >
-      <div className="h-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
-        {/* Placeholder for image */}
-        <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
-          <div className="text-center text-gray-500 dark:text-gray-400">
-            <svg
-              className="w-16 h-16 mx-auto mb-2 opacity-50"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-              />
-            </svg>
-            <p className="text-sm">Project Image</p>
-          </div>
-        </div>
+      <div
+        className={`relative h-full rounded-2xl border border-gray-200/80 dark:border-gray-800/80 bg-white/95 dark:bg-gray-900/95 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 ${
+          className ?? ''
+        }`}
+      >
+        {/* Accent gradient border */}
+        <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-linear-to-br from-purple-500/20 via-transparent to-blue-500/20" />
 
         {/* Content */}
-        <div className="p-6">
-          {/* Title */}
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-            {project.title}
-          </h3>
+        <div className="relative p-6 sm:p-7 flex flex-col h-full gap-3 sm:gap-4">
+          {/* Title as GitHub link */}
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors underline-offset-4 hover:underline">
+              {project.title}
+            </h3>
+          </a>
+
+          {/* Small meta line */}
+          <p className="text-[0.7rem] uppercase tracking-[0.18em] text-gray-400 dark:text-gray-500">
+            Featured project
+          </p>
 
           {/* Description */}
-          <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+          <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
             {project.description}
           </p>
 
           {/* Long Description */}
-          <p className="text-gray-500 dark:text-gray-500 text-sm mb-6 line-clamp-2">
+          <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
             {project.longDescription}
           </p>
 
           {/* Technologies */}
-          <div className="mb-6">
-            <div className="flex flex-wrap gap-2">
-              {project.technologies.map((tech) => (
-                <Badge key={tech} variant="outline" className="text-xs">
+          <div className="mt-1 sm:mt-2">
+            <p className="text-[0.7rem] font-medium uppercase tracking-[0.18em] text-gray-400 dark:text-gray-500 mb-1.5">
+              Stack
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {project.technologies.slice(0, 5).map((tech) => (
+                <Badge
+                  key={tech}
+                  variant="outline"
+                  className="text-[0.7rem] px-2 py-0.5 border-gray-200/80 dark:border-gray-700/80 bg-gray-50/90 dark:bg-gray-800/80"
+                >
                   {tech}
                 </Badge>
               ))}
+              {project.technologies.length > 5 && (
+                <span className="text-[0.7rem] text-gray-400 dark:text-gray-500 ml-1">
+                  +{project.technologies.length - 5} more
+                </span>
+              )}
             </div>
-          </div>
-
-          {/* Links */}
-          <div className="flex gap-3 flex-wrap">
-            <Button
-              href={project.githubUrl}
-              variant="outline"
-              size="sm"
-              className="text-sm"
-            >
-              GitHub →
-            </Button>
-            {project.liveUrl && (
-              <Button
-                href={project.liveUrl}
-                variant="primary"
-                size="sm"
-                className="text-sm"
-              >
-                Live Demo →
-              </Button>
-            )}
           </div>
         </div>
       </div>
